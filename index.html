@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чайная церемония</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #388e3c;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5em;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Чайная церемония</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О церемонии</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="intro" id="home">
+            <h2>Добро пожаловать!</h2>
+            <p>Этот сайт посвящен искусству чайной церемонии — древней традиции, которая объединяет людей через ритуал
+                приготовления и употребления чая. Здесь вы узнаете об истории и традициях чайной церемонии.</p>
+        </section>
+        <section class="intro" id="about">
+            <h2>О чайной церемонии</h2>
+            <p>Чайная церемония, особенно в японской культуре, известна как "Чадо" или "Путь чая". Это не просто процесс
+                заваривания чая, а целое искусство, которое включает в себя гармонию, уважение, чистоту и спокойствие.
+                Церемония может длиться несколько часов и требует особой подготовки и внимания к деталям.</p>
+        </section>
+        <section id="gallery">
+            <h2>Галерея чайных церемоний</h2>
+            <div class="gallery">
+                <img src="1.jpg" alt="Чайная церемония 1">
+                <img src="4d5a118b3396e8d2e53a56607cf69ab7.jpg" alt="Чайная церемония 2">
+                <img src="content_IMG_5589.jpg" alt="Чайная церемония 3">
+                <img src="exd3gblc96bed2gys87edhjvsgwbybxq.jpg" alt="Чайная церемония 4">
+                <img src="gunfu_tea.jpeg" alt="Чайная церемония 5">
+                <img src="tquyjpub7kl9kdn8ftwcs11xthmxixkm.jpg" alt="Чайная церемония 6">
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Чайная церемония. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
