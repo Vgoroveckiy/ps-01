@@ -31,8 +31,8 @@ def get_english_words():
 
         return {"english_word": english_word, "word_definition": word_definition}
 
-    except:
-        print(f"Ошибка при выполнении запроса")
+    except Exception as e:
+        print(f"Ошибка при выполнении запроса: {e}")
         return None
 
 
@@ -42,8 +42,15 @@ def word_game():
     while True:
         word_dict = get_english_words()
 
-        word = word_dict.get("english_word")
-        definition = word_dict.get("word_definition")
+        if (
+            not word_dict
+            or "english_word" not in word_dict
+            or "word_definition" not in word_dict
+        ):
+            break
+
+        word = word_dict["english_word"]
+        definition = word_dict["word_definition"]
 
         word_rus = word_translation(word)
         definition_rus = word_translation(definition)
@@ -54,14 +61,15 @@ def word_game():
 
         if user_input == word_rus:
             print("Поздравляем! Вы угадали слово!")
-            break
         else:
             print(f"Неправильно. Было загадано слово: {word_rus}.")
 
         play_again = input("Хотите сыграть ещё? (y/n): ")
         if play_again.lower() != "y":
-            print("Спасибо за игру!")
             break
 
+    print("Спасибо за игру!")
 
-word_game()
+
+if __name__ == "__main__":
+    word_game()
